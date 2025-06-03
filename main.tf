@@ -2,6 +2,9 @@ resource "ibm_enterprise_account" "enterprise_account" {
   parent = var.parent
   name = var.account_name
   owner_iam_id = var.owner_iam_id
+    timeouts {
+    create = "5m"
+  }
 #   traits {
 #     mfa = "NONE"
 #     enterprise_iam_managed = true
