@@ -10,9 +10,3 @@ resource "ibm_enterprise_account" "enterprise_account" {
     create_iam_service_id_with_apikey_and_owner_policies = true
   }
 }
-
-resource "ibm_enterprise_account" "enterprise_import_account"{
-  parent = local.enterprise_account.parent
-  enterprise_id = local.enterprise_account.name
-  account_id = local.ibm_enterprise_account.enterprise_account.id 
-}
