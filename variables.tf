@@ -1,12 +1,15 @@
 variable ibmcloud_api_key {}
 
 variable parent {
-    parent = "Parent account Name"
+    description = "ID da enterprise onde a conta será criada"
+    type        = string
 }
 variable account_name {
-  account_name = "name"
+    description = "Nome da conta nova"
+    type        = string
 }
 
 variable owner_iam_id {
-  owner_iam_id = "owner_iam_id"
+    description = "Email do novo owner da conta"
+    type        = string
 }
